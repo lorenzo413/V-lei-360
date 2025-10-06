@@ -1,69 +1,95 @@
 import React from "react";
- </tbody>
- </table>
- </div>
+import { motion } from "framer-motion";
+import { Volleyball, Calendar, Users, Image, Mail } from "lucide-react";
 
 
- <a className="mt-4 inline-block text-amber-500 text-sm font-semibold" href="#">Exportar calendário (iCal) →</a>
- </section>
- );
+const gallery = [
+"https://images.unsplash.com/photo-1600110347255-6c4e5b7a4a9f?w=1200&q=80",
+"https://images.unsplash.com/photo-1605902711622-cfb43c4437b7?w=1200&q=80",
+"https://images.unsplash.com/photo-1587385789090-83bfa9e95d2a?w=1200&q=80",
+"https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=1200&q=80",
+];
+
+
+export default function SiteVolei() {
+return (
+<div className="min-h-screen bg-gradient-to-b from-blue-100 via-white to-blue-50 text-gray-900 font-sans">
+<Header />
+<Hero />
+<Highlights />
+<Gallery />
+<Contact />
+<Footer />
+</div>
+);
+}
+
+
+function Header() {
+return (
+<header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-md">
+<div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div className="flex items-center gap-2">
+<Volleyball className="text-orange-500 w-7 h-7" />
+<h1 className="font-extrabold text-xl text-blue-900">Vôlei Clube Brasil</h1>
+</div>
+<nav className="hidden md:flex gap-6 text-sm text-gray-600">
+<a href="#hero" className="hover:text-orange-500">Início</a>
+<a href="#gallery" className="hover:text-orange-500">Galeria</a>
+<a href="#contact" className="hover:text-orange-500">Contato</a>
+</nav>
+</div>
+</header>
+);
+}
+
+
+function Hero() {
+return (
+<section id="hero" className="relative">
+<img src={gallery[1]} alt="Quadra de vôlei" className="w-full h-[500px] object-cover brightness-75" />
+<div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+<motion.h2 initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+Viva a emoção do Vôlei Brasileiro!
+</motion.h2>
+<motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 1 }} className="max-w-2xl text-lg text-blue-50">
+Acompanhe os melhores momentos, notícias e eventos das quadras. Paixão, energia e trabalho em equipe!
+</motion.p>
+<a href="#gallery" className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold shadow-md transition">
+Ver Galeria
+</a>
+</div>
+</section>
+);
+}
+
+
+function Highlights() {
+const highlights = [
+{ title: "Superliga 2025", desc: "A temporada mais disputada dos últimos anos!" },
+{ title: "Seleção Brasileira", desc: "Rumo a mais um título internacional." },
+{ title: "Treinamentos Abertos", desc: "Venha conhecer os bastidores e os atletas." },
+];
+
+
+return (
+<section className="max-w-6xl mx-auto px-6 py-16 text-center">
+<h3 className="text-2xl font-bold text-blue-900 mb-8">Destaques</h3>
+<div className="grid gap-6 md:grid-cols-3">
+{highlights.map((h, i) => (
+<motion.div whileHover={{ scale: 1.05 }} key={i} className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-400">
+<h4 className="font-semibold text-lg text-blue-900 mb-2">{h.title}</h4>
+<p className="text-gray-600 text-sm">{h.desc}</p>
+</motion.div>
+))}
+</div>
+</section>
+);
 }
 
 
 function Gallery() {
- return (
- <section id="gallery" className="mt-12">
- <h3 className="text-xl font-semibold">Galeria</h3>
- <p className="text-sm text-slate-500 mt-1">Momentos capturados na quadra.</p>
-
-
- <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
- {gallery.map((src, i) => (
- <motion.div key={i} whileHover={{ scale: 1.03 }} className="overflow-hidden rounded-lg shadow-sm">
- <img src={src} alt={`Galeria ${i+1}`} className="w-full h-40 object-cover" />
- </motion.div>
- ))}
- </div>
- </section>
- );
+return (
+<section id="gallery" className="bg-gradient-to-b from-white to-blue-50 py-16">
+<div className="max-w-6xl mx-auto px-6 text-center">
 }
-
-
-function Contact() {
- return (
- <section id="contact" className="mt-12 rounded-2xl p-6 bg-white shadow-md border">
- <h3 className="text-lg font-semibold flex items-center gap-2"><Mail className="w-5 h-5 text-amber-400"/>Contato</h3>
- <p className="text-sm text-slate-500 mt-2">Entre em contato para treinos, eventos e parcerias.</p>
-
-
- <form className="mt-4 grid gap-3 md:grid-cols-2">
- <input required className="p-3 border rounded-md" placeholder="Nome" />
- <input required className="p-3 border rounded-md" placeholder="E-mail" type="email" />
- <input className="p-3 border rounded-md md:col-span-2" placeholder="Assunto" />
- <textarea className="p-3 border rounded-md md:col-span-2" rows={4} placeholder="Mensagem" />
- <div className="md:col-span-2 flex items-center justify-between">
- <div className="text-sm text-slate-500">Também podemos adicionar integração com WhatsApp ou formulário Google.</div>
- <button type="submit" className="px-4 py-2 rounded-md bg-amber-400 text-white font-semibold">Enviar</button>
- </div>
- </form>
- </section>
- );
-}
-
-
-// Utilities
-function formatDate(iso) {
- try {
- const d = new Date(iso + "T00:00:00");
- return d.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
- } catch (e) {
- return iso;
- }
-}
-
-
-// Notes for integration:
-// • Tailwind CSS must be configured in your project.
-// • Imports used: framer-motion, lucide-react. Install with: npm i framer-motion lucide-react
-// • Replace sample data and Unsplash images with your own content.
-// • For production: add SEO metadata, sitemap, analytics and image optimization (next/image or similar).
