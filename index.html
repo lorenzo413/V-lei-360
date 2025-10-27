@@ -3,18 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Vôlei 360 — Tudo sobre Vôlei</title>
+<title>Vôlei 360 — Fundamentos e Roupas Adequadas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
---bg:#FFF6F0; /* off-white warm */
---accent:#FF7A18; /* deep orange */
---accent-2:#FFB86B; /* peach */
+--bg:#FFF6F0;
+--accent:#FF7A18;
+--accent-2:#FFB86B;
 --dark:#2B2B2B;
 --card:#FFFFFF;
---glass: rgba(255,255,255,0.6);
 font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#FFF1E6);color:var(--dark);}
@@ -25,31 +24,19 @@ header{display:flex;align-items:center;justify-content:space-between;gap:16px;ma
 h1{font-size:38px;margin:0;line-height:1.02}
 nav a{margin-left:14px;text-decoration:none;color:var(--dark);font-weight:600}
 
-
 .hero{display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:center;background:linear-gradient(90deg, rgba(255,122,24,0.06), rgba(255,184,107,0.04));border-radius:18px;padding:28px}
 .hero .intro{padding:18px}
 .hero p.lead{font-size:20px;margin-top:8px;margin-bottom:16px}
 .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
-
 
 .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(45,20,10,0.06)}
 .funds{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
 .funds h3{font-size:20px;margin:0 0 8px 0}
 .funds p{margin:0;font-size:15px;line-height:1.45}
 
-
-.big{font-size:18px}
-section{margin-top:22px}
-
-
-.image-box{border-radius:12px;overflow:hidden;height:100%;min-height:220px;display:flex}
-.image-box img{width:100%;height:100%;object-fit:cover;display:block}
-
-
+section{margin-top:32px}
 footer{margin-top:28px;padding:22px 0;text-align:center;color:#6a4b3b}
 
-
-/* responsive */
 @media (max-width:980px){
 .hero{grid-template-columns:1fr}
 h1{font-size:32px}
@@ -59,22 +46,96 @@ h1{font-size:32px}
 h1{font-size:26px}
 .cta{display:block;width:100%;text-align:center}
 }
-
 </style>
 </head>
 <body>
 <div class="container">
+
 <header>
-<div class="logo">
-<div class="mark">V3</div>
-<div>
-<h1>Vôlei 360</h1>
-<div style="font-size:13px;color:#8a5b3f;margin-top:4px">Fundamentos. Técnicas. Treinos.</div>
+  <div class="logo">
+    <div class="mark">V3</div>
+    <div>
+      <h1>Vôlei 360</h1>
+      <div style="font-size:13px;color:#8a5b3f;margin-top:4px">Tudo sobre Fundamentos e Equipamentos</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#fundamentos">Fundamentos</a>
+    <a href="#roupas">Roupas Adequadas</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="intro">
+    <h2>Domine o Jogo com Técnica e Conforto</h2>
+    <p class="lead">Aprenda os principais fundamentos do vôlei e descubra quais roupas e equipamentos podem melhorar o seu desempenho em quadra.</p>
+    <a class="cta" href="#fundamentos">Começar Agora</a>
+  </div>
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1617044289270-4c8c4c4d1a6d?q=80&w=800" alt="Jogo de Vôlei">
+  </div>
+</section>
+
+<section id="fundamentos">
+  <h2>🏐 Fundamentos do Vôlei</h2>
+  <div class="funds">
+    <div class="card">
+      <h3>Saque</h3>
+      <p>É a primeira ação do jogo. Pode ser feito por baixo ou por cima, e o objetivo é enviar a bola de forma estratégica para dificultar o passe adversário.</p>
+    </div>
+    <div class="card">
+      <h3>Recepção</h3>
+      <p>É o ato de receber o saque do adversário. Normalmente feito com o toque de manchete, exige postura e controle de bola.</p>
+    </div>
+    <div class="card">
+      <h3>Levantamento</h3>
+      <p>Responsável por preparar o ataque. O levantador usa o toque de dedos para posicionar a bola com precisão para o atacante.</p>
+    </div>
+    <div class="card">
+      <h3>Ataque</h3>
+      <p>É a jogada ofensiva, buscando marcar ponto. Requer força, tempo de salto e boa leitura da defesa adversária.</p>
+    </div>
+    <div class="card">
+      <h3>Bloqueio</h3>
+      <p>É a primeira linha de defesa contra o ataque adversário. Deve ser sincronizado e bem posicionado na rede.</p>
+    </div>
+    <div class="card">
+      <h3>Defesa</h3>
+      <p>Feita após o ataque do oponente, exige reflexo e agilidade para evitar que a bola toque o chão.</p>
+    </div>
+  </div>
+</section>
+
+<section id="roupas">
+  <h2>👕 Roupas e Equipamentos Adequados</h2>
+  <div class="funds">
+    <div class="card">
+      <h3>Uniforme Leve</h3>
+      <p>Camisas e shorts devem ser feitos de tecidos leves e respiráveis, como o poliéster, para garantir conforto durante o jogo.</p>
+    </div>
+    <div class="card">
+      <h3>Tênis Específicos</h3>
+      <p>O ideal é usar tênis com sola de borracha antiderrapante, que ofereçam estabilidade e amortecimento para os saltos.</p>
+    </div>
+    <div class="card">
+      <h3>Joelheiras</h3>
+      <p>Essenciais para proteger os joelhos durante mergulhos e defesas próximas ao chão.</p>
+    </div>
+    <div class="card">
+      <h3>Meias Confortáveis</h3>
+      <p>Deve-se optar por meias esportivas que evitem bolhas e absorvam o suor.</p>
+    </div>
+    <div class="card">
+      <h3>Acessórios</h3>
+      <p>Faixas, tornozeleiras e cotoveleiras ajudam na prevenção de lesões e na estabilidade durante as partidas.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Vôlei 360 — Todos os direitos reservados.
+</footer>
+
 </div>
-</div>
-<div style="display:flex;align-items:center;gap:18px">
-<nav>
-<a href="#fundamentos">Fundamentos</a>
-<a href="#treino">Treino</a>
-<a href="#dicas">Dicas</a>
+</body>
 </html>
